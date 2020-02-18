@@ -1,0 +1,73 @@
+body {
+  margin: 0 auto;
+}
+
+
+header {
+  margin: 0 auto;
+  padding-top: 5vh;
+  background-color: #3ccc;
+  box-shadow: grey 0px 2px 8px;}
+
+header h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+nav {
+  display: flex;
+}
+
+nav ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+ul li a{
+  text-decoration: none;
+}
+ul li p {
+  width: 70vw;
+  margin: 5vw 0;
+  overflow-wrap: normal;
+}
+
+.featureSet {
+  background-color: hsl(0,0%, 88%);
+  padding: 7vh 5vw;
+  margin: 10vh 10vw;
+  border-radius: 15px;
+  font-family: "Gill Sans";
+  font-size: 1.2em;
+}
+
+
+.userProfile {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-end;
+  background-color: #ccc;
+  align-items: flex-start;
+
+}
+.userProfile img {
+  border: 5px outset cornflowerblue;
+  min-width: 20vw;
+  min-height:20vh;
+  border-radius: 50%;
+  position: relative;
+  bottom: -20vh;
+  background-color: aquamarine;
+  margin: 3vh 3vw;
+  box-shadow: cadetblue 0px 4px 8px;
+
+}
+
+.userProfile h3 {
+  align-self: flex-end
+}
