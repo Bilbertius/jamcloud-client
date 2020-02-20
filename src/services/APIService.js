@@ -3,14 +3,10 @@ import config from '../config';
 
 
 
-const ApiService = {
+const APIService = {
 	getSongs() {
 		return fetch(`${config.API_ENDPOINT}/songs`)
-			.then(res =>
-				(!res.ok)
-					? res.json().then(e => Promise.reject(e))
-					: res.json()
-			)
+			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 	},
 	getSong(songID) {
 		return fetch(`${config.API_ENDPOINT}/songs/${songID}`, {
@@ -19,11 +15,7 @@ const ApiService = {
 				'authorization': `bearer ${TokenService.getAuthToken()}`,
 			},
 		})
-			.then(res =>
-				(!res.ok)
-					? res.json().then(e => Promise.reject(e))
-					: res.json()
-			)
+			.then(res => !res.ok? res.json().then(e => Promise.reject(e)) : res.json())
 	},
 	postSong(song) {
 	
@@ -35,11 +27,7 @@ const ApiService = {
 			},
 			body: JSON.stringify(song)
 		})
-			.then(res =>
-				(!res.ok)
-					? res.json().then(e => Promise.reject(e))
-					: res.json()
-			)
+			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 
 	},
 	getSongReview(songID) {
@@ -48,11 +36,7 @@ const ApiService = {
 				'authorization': `bearer ${TokenService.getAuthToken()}`,
 			},
 		})
-			.then(res =>
-				(!res.ok)
-					? res.json().then(e => Promise.reject(e))
-					: res.json()
-			)
+			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 	},
 	postReview(songID, content) {
 		return fetch(`${config.API_ENDPOINT}/reviews`, {
@@ -66,13 +50,19 @@ const ApiService = {
 				content,
 			}),
 		})
-			.then(res =>
-				(!res.ok)
-					? res.json().then(e => Promise.reject(e))
-					: res.json()
-			)
+			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
+	},
+	postUser(newUser) {
+		return fetch(`${config.API_ENDPOINT}/users`, {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(newUser)
+		})
+			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 	}
 };
 
 
-export default ApiService;
+export default APIService;

@@ -13,7 +13,13 @@ export default SongContext;
 
 export class SongProvider extends React.Component{
     state = {
-        song: [],
+        jam: {
+            song: '',
+            artist: '',
+            album: '',
+            venue: '',
+            date: ''
+        },
         error: null,
     };
 
@@ -35,7 +41,7 @@ export class SongProvider extends React.Component{
 
     render(){
         const value = {
-            song: this.state.song,
+            jam: this.state.jam,
             error: this.state.error,
             setError: this.setError,
             clearError: this.clearError,

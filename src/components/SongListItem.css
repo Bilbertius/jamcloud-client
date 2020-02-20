@@ -1,0 +1,55 @@
+ul.songlist {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+
+    text-align: left;
+    background: ;
+    margin: 1vh 10vw;
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    min-width: 70vw;
+    box-shadow:  2px 0px 12px inset rgba(129, 255, 212, 0.32);
+    align-items: self-start;
+}
+
+ul.songlist ul {
+    width: 80%;
+}
+
+span {
+    margin: 2vh 2vw;
+}
+.song {
+
+    font-size: 1.1em;
+    text-align: left;
+    font-weight: bold;
+    flex-grow: 1;
+    color: #a9f4ff;
+}
+.artist {
+    flex-grow: 1;
+    font-size: 0.9em;
+    font-weight: light;
+    text-align: center;
+    color: #a9f4ff;
+}
+
+.album {
+    flex-grow: 1;
+    font-weight: light;
+    color: #a9f4ff;
+}
+
+.venue {
+    text-align: right;
+    flex-grow: 1;
+    color: #a9f4ff;
+}
+
+@media screen and (min-width: 500px) {
+    ul.songlist {
+        max-width: 50vw;
+    }
+}

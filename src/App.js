@@ -67,16 +67,11 @@ export default class App extends React.Component {
         
         return (
             <Router>
-                <header><h1>Jamlist</h1>
+                <header>
+                    <Link to="/"><h1>JamCloud</h1></Link>
+                    
                     <nav>
-                        
-                        <ul>
-                            <li>
-                                <Link to='/'>Home</Link>
-                            </li>
-                            <li>
-                                <Link to='/user'>Profile</Link>
-                            </li>
+                        <ul className='NavLinks'>
                             <li>
                                 <Link to='/songs'>Discover</Link>
                             </li>
@@ -86,10 +81,6 @@ export default class App extends React.Component {
                             <li>
                                 <Link to='/login'>Login</Link>
                             </li>
-                            <li>
-                                <Link to='/register'>Registration</Link>
-                            </li>
-                        
                         </ul>
                     </nav>
                 </header>
@@ -97,7 +88,7 @@ export default class App extends React.Component {
                     <Route path='/login'>
                         <LoginPage />
                     </Route>
-                    <Route path={'/register'}>
+                    <Route path='/register'>
                         <RegistrationPage />
                     </Route>
                     <Route path='/user'>
@@ -112,7 +103,7 @@ export default class App extends React.Component {
                         <Create />
                     </Route>
                     
-                    <Route to='/'>
+                    <Route path='/'>
                         <FrontPage />
                     </Route>
                 </Switch>

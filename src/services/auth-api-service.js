@@ -1,6 +1,4 @@
 import config from '../config'
-import TokenService from './token-service'
-import IdleService from './idle-service'
 
 const AuthApiService = {
 	postLogin({ user_name, password }) {

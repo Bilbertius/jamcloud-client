@@ -1,4 +1,11 @@
- h3 ,  a {
+ a {
    text-decoration: none;
+    padding:5vh 5vw;
+     max-width: 30vw;
+    text-align: center;
+     display: flex;
+     flex-direction: row nowrap;
 }
-
+Switch {
+    display: flex;
+}

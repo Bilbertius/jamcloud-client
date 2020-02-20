@@ -1,7 +1,9 @@
 
 import React, { Component } from 'react'
+import { Link, Route } from 'react-router-dom';
 import AuthApiService from '../services/auth-api-service'
-import { Button, Input } from '../Utils/Utils'
+import { Button, Input } from './Utils/Utils'
+import RegistrationPage from '../routes/RegistrationPage';
 
 export default class LoginForm extends Component {
 	static defaultProps = {
@@ -24,9 +26,7 @@ export default class LoginForm extends Component {
 				password.value = ''
 				this.props.onLoginSuccess()
 			})
-			.catch(res => {
-				this.setState({ error: res.error })
-			})
+			.catch(res => res.error)
 	}
 	
 	render() {
@@ -36,12 +36,14 @@ export default class LoginForm extends Component {
 				className='LoginForm'
 				onSubmit={this.handleSubmitJwtAuth}
 			>
+				<h2 id='login_header'>Login</h2>
+				
 				<div role='alert'>
 					{error && <p className='red'>{error}</p>}
 				</div>
 				<div className='user_name'>
 					<label htmlFor='LoginForm__user_name'>
-						User name
+						Username
 					</label>
 					<Input
 						required
@@ -63,6 +65,8 @@ export default class LoginForm extends Component {
 				<Button type='submit'>
 					Login
 				</Button>
+				<span id='reglink-span'>Not registered? <Link id='reglink' to='/register'>Click here</Link> to sign up.</span>
+				<Route path='/register' component={RegistrationPage}/>
 			</form>
 		)
 	}
