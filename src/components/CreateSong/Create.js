@@ -1,22 +1,22 @@
 import React from 'react';
-import APIService from '../services/APIService';
-import './Create.css';
-import Discover from './Discover';
+import APIService from '../../services/APIService';
+
+import Discover from '../Discover/Discover';
 
 
 class Create extends React.Component {
 	static defaultProps = {
 		onSubmitSongSuccess: () => {
-			return(<Discover />)
+		
 		}
 	}
 	
 	state = { error: null }
 	
-	handleSubmitSong = ev => {
-		ev.preventDefault();
+	handleSubmitSong = e => {
+		e.preventDefault();
 		this.setState({ error: null })
-		const { song, artist, album, venue, show_date } = ev.target
+		const { song, artist, album, venue, show_date } = e.target
 		
 		APIService.postSong({
 			song: song.value,
@@ -37,7 +37,7 @@ class Create extends React.Component {
 				this.setState({ error: res.error })
 			})
 		
-	}
+	};
 	
 	
 	render() {

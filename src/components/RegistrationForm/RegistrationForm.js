@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Button, Input } from './Utils/Utils'
+import { Button, Input } from '../Utils/Utils'
 
-import APIService from '../services/APIService';
+import APIService from '../../services/APIService';
 
 export default class RegistrationForm extends Component {
 	static defaultProps = {

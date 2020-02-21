@@ -1,18 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './App.css';
-import FrontPage from './components/FrontPage';
-import Profile from './components/Profile';
-
-import Discover from './components/Discover';
-import Create from './components/Create.js';
+import FrontPage from './components/FrontPage/FrontPage';
+import Discover from './components/Discover/Discover';
+import Create from './components/CreateSong/Create.js';
 import LoginPage from './routes/LoginPage';
-import IdleService from './services/idle-service';
-import AuthApiService from './services/auth-api-service';
 import RegistrationPage from './routes/RegistrationPage';
-import TokenService from './services/token-service.js';
-//import PrivateRoute from './Utils/PrivateRoute';
-//import PublicOnlyRoute from './Utils/PublicRouteOnly';
+
+
+
 
 
 export default class App extends React.Component {
@@ -22,45 +18,7 @@ export default class App extends React.Component {
         console.error(error)
         return {hasError: true}
     }
-    
-    componentDidMount() {
-        
-        IdleService.setIdleCallback(this.logoutFromIdle)
-        
-        
-        if (TokenService.hasAuthToken()) {
-            
-            
-            IdleService.regiserIdleTimerResets()
-            
-            
-            TokenService.queueCallbackBeforeExpiry(() => {
-                
-                AuthApiService.postRefreshToken()
-            })
-        }
-    }
-    
-    componentWillUnmount() {
-        
-        IdleService.unRegisterIdleResets()
-        
-        TokenService.clearCallbackBeforeExpiry()
-    }
-    
-    logoutFromIdle = () => {
-        /* remove the token from localStorage */
-        TokenService.clearAuthToken()
-        /* remove any queued calls to the refresh endpoint */
-        TokenService.clearCallbackBeforeExpiry()
-        /* remove the timeouts that auto logout when idle */
-        IdleService.unRegisterIdleResets()
-        /*
-		  react won't know the token has been removed from local storage,
-		  so we need to tell React to rerender
-		*/
-        this.forceUpdate()
-    }
+ 
     
     render() {
         
@@ -88,11 +46,8 @@ export default class App extends React.Component {
                     <Route path='/login'>
                         <LoginPage />
                     </Route>
-                    <Route path='/register'>
+                    <Route path='/register' >
                         <RegistrationPage />
-                    </Route>
-                    <Route path='/user'>
-                        <Profile />
                     </Route>
                     
                     <Route path='/songs'>

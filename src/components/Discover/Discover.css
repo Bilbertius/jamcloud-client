@@ -1,10 +1,10 @@
  a {
    text-decoration: none;
     padding:5vh 5vw;
-     max-width: 30vw;
+     max-width: 25vw;
     text-align: center;
      display: flex;
-     flex-direction: row nowrap;
+     flex-direction: row;
 }
 Switch {
     display: flex;

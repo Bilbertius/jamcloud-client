@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 import SongListContext from '../contexts/SongListContext';
 import APIService from '../services/APIService';
 import { Section } from '../components/Utils/Utils';
-import SongListItem from '../components/SongListItem';
+import SongListItem from '../components/SongListItem/SongListItem';
 
 export default class SongList extends Component {
-	static contextType = SongListContext
+	static contextType = SongListContext;
 	
 	componentDidMount() {
-		this.context.clearError()
+		this.context.clearError();
 		APIService.getSongs()
 			.then(this.context.setSongList)
 			.catch(this.context.setError)
 	}
 	
 	renderSongs() {
-		const { songList = [] } = this.context
+		const { songList = [] } = this.context;
 		return songList.map(song =>
 			<SongListItem
 				key={song.id}
@@ -26,7 +26,7 @@ export default class SongList extends Component {
 	}
 	
 	render() {
-		const { error } = this.context
+		const { error } = this.context;
 		return (
 			<Section list className='SongListPage'>
 				{error

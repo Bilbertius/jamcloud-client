@@ -6,6 +6,8 @@ import './SongListItem.css';
 
 
 export default class SongListItem extends Component {
+    
+    
     render() {
         const {song} = this.props
         return (
@@ -20,6 +22,7 @@ export default class SongListItem extends Component {
                         <li>
                             <span className='venue'>{song.date} @  {song.venue}</span>
                     </li>
+                    
                     </ul>
                 </ul>
             </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../components/LoginForm';
+import LoginForm from '../components/LoginForm/LoginForm';
 import { Section } from '../components/Utils/Utils';
 
 export default class LoginPage extends React.Component {

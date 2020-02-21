@@ -5,33 +5,59 @@ header {
 * {
   font-family: "Gill Sans";
 }
+
+li > p {
+  color: #a9f4ff;
+  font-size: 1.1em;
+
+}
+
 header h1 {
 
   color: #a9f4ff;
 }
 nav ul {
   position: fixed;
-  bottom: 5vh;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  bottom: 0;
   left: 0;
-  width: 80vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  border-top: 4px solid #a9f4ff;
+  height: 10vh;
+  width: 100%;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+nav {
+  width: 100vw;
+
 }
 
 ul {
   list-style-type: none;
 }
 
-
+ul.NavLinks {
+  display: flex;
+  justify-content: space-around;
+}
 ul.NavLinks a  {
   text-decoration: none;
   color: aquamarine;
-  position: absolute;
-  top: 0;
+
+
   padding: 1vh 1vw;
 
 }
-
+input {
+  color : #a9f4ff;
+}
 
 
 .userProfile {
@@ -42,18 +68,7 @@ ul.NavLinks a  {
   align-items: flex-start;
 
 }
-.userProfile img {
-  border: 5px outset cornflowerblue;
-  min-width: 20vw;
-  min-height:20vh;
-  border-radius: 50%;
-  position: relative;
-  bottom: -20vh;
-  background-color: aquamarine;
-  margin: 3vh 3vw;
-  box-shadow: cadetblue 0px 4px 8px;
 
-}
 
 .userProfile h3 {
   align-self: flex-end
@@ -66,6 +81,13 @@ Section.LoginPage {
   align-items: center;
 }
 
+Section input {
+  margin-top: 2vh;
+}
+
+Section button {
+  margin-top: 2vh;
+}
 Section.RegistrationPage {
   display: flex;
   justify-content: center;
@@ -113,4 +135,102 @@ form {
 
 a#reglink  {
   color: aqua;
+}
+
+form {
+  padding: 3vh 3vw;
+  max-height: 60vh;
+
+  border-radius: 5px;
+  box-shadow: 2px 5px 10px rgba(127, 255, 212, 0.22);
+
+
+}
+div {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+span {
+  display: flex;
+
+  width: 80%;
+}
+
+::placeholder {
+  color: #a9f4ff;
+  font-size: 1.1em;
+}
+
+
+input {
+  width: 30vw;
+  border: none;
+  background: inherit;
+  border-bottom: 2px solid aquamarine;
+  border-right: 2px solid aquamarine;
+
+  border-radius: 9px;
+  padding: .5vh 1vw;
+  flex: 2;
+  margin-left: 1vw;
+  box-shadow: -6px -5px 6px inset rgba(169, 244, 255, 0.19);
+
+
+}
+
+#show_date {
+  color: #a9f4ff;
+  font-size: 1em;
+}
+
+label {
+  flex: 1;
+  color: #a9f4ff;
+}
+
+h3 {
+  color : aquamarine;
+  padding: 1vh 1vw;
+
+}
+
+
+button {
+  padding: 1vh 5vw;
+  color: #a9f4ff;
+  font-size: 1em;
+  align-self: center;
+  border-radius: 8px;
+  border: 2px outset #a9f4ff;
+  background: inherit;
+  box-shadow: 0 0 15px inset rgba(169, 244, 255, 0.34);
+
+}
+
+@media only screen and (min-width: 450px) {
+  form {
+    max-width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  form {
+    max-width: 30vw;
+  }
+}
+
+
+
+@media screen and (min-width: 450px) {
+  form {
+    max-width: 40vw;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  form {
+    max-width: 30vw;
+  }
 }

@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react'
 import { Link, Route } from 'react-router-dom';
-import AuthApiService from '../services/auth-api-service'
-import { Button, Input } from './Utils/Utils'
-import RegistrationPage from '../routes/RegistrationPage';
+import AuthApiService from '../../services/auth-api-service'
+import { Button, Input } from '../Utils/Utils'
+import RegistrationPage from '../../routes/RegistrationPage';
 
 export default class LoginForm extends Component {
 	static defaultProps = {
@@ -42,31 +42,34 @@ export default class LoginForm extends Component {
 					{error && <p className='red'>{error}</p>}
 				</div>
 				<div className='user_name'>
-					<label htmlFor='LoginForm__user_name'>
-						Username
-					</label>
+				
 					<Input
 						required
+						placeholder='Username'
 						name='user_name'
 						id='LoginForm__user_name'>
 					</Input>
 				</div>
 				<div className='password'>
-					<label htmlFor='LoginForm__password'>
-						Password
-					</label>
+				
 					<Input
 						required
 						name='password'
 						type='password'
-						id='LoginForm__password'>
+						id='LoginForm__password'
+						placeholder='Password'
+					>
 					</Input>
 				</div>
 				<Button type='submit'>
 					Login
 				</Button>
+				
 				<span id='reglink-span'>Not registered? <Link id='reglink' to='/register'>Click here</Link> to sign up.</span>
-				<Route path='/register' component={RegistrationPage}/>
+				<Route path='/register' >
+					<RegistrationPage />
+				</Route>
+			
 			</form>
 		)
 	}

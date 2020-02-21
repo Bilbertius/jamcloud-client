@@ -8,9 +8,9 @@ const APIService = {
 		return fetch(`${config.API_ENDPOINT}/songs`)
 			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 	},
-	getSong(songID) {
+	deleteSong(songID) {
 		return fetch(`${config.API_ENDPOINT}/songs/${songID}`, {
-			method: 'GET',
+			method: 'DELETE',
 			headers: {
 				'authorization': `bearer ${TokenService.getAuthToken()}`,
 			},
