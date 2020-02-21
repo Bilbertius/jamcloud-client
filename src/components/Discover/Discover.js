@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SongList from '../../routes/SongList';
 import './Discover.css';
 
@@ -11,8 +11,6 @@ function Discover(props) {
 			<Route path='/songs'>
 				<SongList />
 			</Route>
-		
-			
 		</Switch>
 	</Router>
 	)

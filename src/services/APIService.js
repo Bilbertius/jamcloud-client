@@ -8,6 +8,10 @@ const APIService = {
 		return fetch(`${config.API_ENDPOINT}/songs`)
 			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 	},
+	getSongTags(songID) {
+		return fetch(`${config.API_ENDPOINT}/tags/${songID}`)
+			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
+	},
 	deleteSong(songID) {
 		return fetch(`${config.API_ENDPOINT}/songs/${songID}`, {
 			method: 'DELETE',
@@ -30,16 +34,9 @@ const APIService = {
 			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 
 	},
-	getSongReview(songID) {
-		return fetch(`${config.API_ENDPOINT}/songs/${songID}/reviews`, {
-			headers: {
-				'authorization': `bearer ${TokenService.getAuthToken()}`,
-			},
-		})
-			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
-	},
-	postReview(songID, content) {
-		return fetch(`${config.API_ENDPOINT}/reviews`, {
+	
+	postTag(songID, content) {
+		return fetch(`${config.API_ENDPOINT}/tags`, {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',

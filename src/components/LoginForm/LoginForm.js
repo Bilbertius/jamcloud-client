@@ -65,7 +65,7 @@ export default class LoginForm extends Component {
 					Login
 				</Button>
 				
-				<span id='reglink-span'>Not registered? <Link id='reglink' to='/register'>Click here</Link> to sign up.</span>
+				<span id='reglink-span'>Not registered? <Link id='reglink' to='/register'> Click here</Link> to sign up.</span>
 				<Route path='/register' >
 					<RegistrationPage />
 				</Route>

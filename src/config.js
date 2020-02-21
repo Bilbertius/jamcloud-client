@@ -1,4 +1,6 @@
+
+
 export default {
-	API_ENDPOINT: 'http://localhost:8000/api',
-	TOKEN_KEY: 'd0do4e0q0fjbswlosgddgmscpowepbvomeg9evbhovw9ebrjwf9kvwdedsog'
+	API_ENDPOINT: 'http://localhost:8080/api',
+	API_KEY: process.env.REACT_APP_API_KEY
 }

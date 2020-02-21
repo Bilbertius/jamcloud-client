@@ -1,6 +1,11 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  align-self: center;
 }
 * {
   font-family: "Gill Sans";
@@ -98,15 +103,7 @@ Section.RegistrationPage {
   color: aquamarine;
  }
 
-form {
-  justify-content: space-around;
-  box-shadow: 2px 0px 15px inset rgba(127, 255, 212, 0.2);
-  max-height: 60vh;
-  text-align : center;
-  align-self: center;
-  max-width: 90vw;
-  min-width: 80vw;
-}
+
 
 
 .user_name {
@@ -114,7 +111,7 @@ form {
   flex-direction: row;
   width: 80%;
 }
-#user_email {
+.user_email {
   display: flex;
   flex-direction: row;
   width:80%
@@ -128,9 +125,13 @@ form {
 #reglink {
   padding: 0;
   text-align: center;
+  margin: auto 3px;
 }
 #reglink-span {
   color: rgba(255, 228, 196, 0.31);
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 a#reglink  {
@@ -138,13 +139,20 @@ a#reglink  {
 }
 
 form {
-  padding: 3vh 3vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: center;
+  align-items: center;
+  padding: 2vh 3vw;
   max-height: 60vh;
-
+  width: 90vw;
   border-radius: 5px;
   box-shadow: 2px 5px 10px rgba(127, 255, 212, 0.22);
-
-
+  box-shadow: 2px 0px 15px inset rgba(127, 255, 212, 0.2);
+  max-height: 60vh;
+  max-width: 90vw;
+  min-width:65vw;
+  justify-content: space-around;
 }
 div {
   display: flex;
@@ -165,20 +173,20 @@ span {
 
 
 input {
-  width: 30vw;
+  width: 70vw;
   border: none;
   background: inherit;
   border-bottom: 2px solid aquamarine;
   border-right: 2px solid aquamarine;
-
-  border-radius: 9px;
-  padding: .5vh 1vw;
-  flex: 2;
-  margin-left: 1vw;
-  box-shadow: -6px -5px 6px inset rgba(169, 244, 255, 0.19);
+  border-radius: 15px;
+  padding: .7vh 1vw;
+  flex-grow: 1;
+  margin: .5vh 2vw;
+  box-shadow: 6px 5px 6px inset rgba(169, 244, 255, 0.19);
 
 
 }
+
 
 #show_date {
   color: #a9f4ff;
@@ -209,28 +217,21 @@ button {
 
 }
 
-@media only screen and (min-width: 450px) {
+
+
+@media only screen and (min-width: 650px) {
   form {
-    max-width: 40vw;
+    width: 60vw;
   }
+  input {
+    width: 40vw;
+  }
+
 }
 
 @media only screen and (min-width: 820px) {
   form {
-    max-width: 30vw;
+    width: 50vw;
   }
-}
-
-
-
-@media screen and (min-width: 450px) {
-  form {
-    max-width: 40vw;
-  }
-}
-
-@media screen and (min-width: 820px) {
-  form {
-    max-width: 30vw;
-  }
+  input { width: 35vw}
 }

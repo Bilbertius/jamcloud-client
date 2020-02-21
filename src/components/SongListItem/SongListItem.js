@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 import './SongListItem.css';
 
 
@@ -9,7 +10,7 @@ export default class SongListItem extends Component {
     
     
     render() {
-        const {song} = this.props
+        const {song} = this.props;
         return (
             <>
                 <ul className='songlist'>
@@ -25,6 +26,7 @@ export default class SongListItem extends Component {
                     
                     </ul>
                 </ul>
+                
             </>
             
             

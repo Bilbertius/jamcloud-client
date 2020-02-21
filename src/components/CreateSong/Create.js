@@ -1,7 +1,6 @@
 import React from 'react';
 import APIService from '../../services/APIService';
 
-import Discover from '../Discover/Discover';
 
 
 class Create extends React.Component {
