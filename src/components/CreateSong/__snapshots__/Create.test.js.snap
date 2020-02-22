@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create component renders Create given props 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <h3>
+      Add Song
+    </h3>
+    <div>
+      <span>
+        <input
+          id="song"
+          name="song"
+          placeholder="Song"
+          type="text"
+        />
+      </span>
+      <span>
+        <input
+          id="artist"
+          name="artist"
+          placeholder="Artist"
+          type="text"
+        />
+      </span>
+      <span>
+        <input
+          id="album"
+          name="album"
+          placeholder="Album"
+          type="text"
+        />
+      </span>
+      <span>
+        <input
+          id="venue"
+          name="venue"
+          placeholder="Venue"
+          type="text"
+        />
+      </span>
+      <span>
+        <input
+          id="show_date"
+          name="show_date"
+          placeholder="date"
+          type="date"
+        />
+      </span>
+    </div>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</Fragment>
+`;

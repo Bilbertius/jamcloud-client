@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders app landing', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/hello/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElement = getByText(/jamcloud/i);
+  expect(linkElement).toBe(InTheDocument());
 });

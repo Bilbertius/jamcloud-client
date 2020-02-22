@@ -146,9 +146,11 @@ form {
   padding: 2vh 3vw;
   max-height: 60vh;
   width: 90vw;
-  border-radius: 5px;
-  box-shadow: 2px 5px 10px rgba(127, 255, 212, 0.22);
-  box-shadow: 2px 0px 15px inset rgba(127, 255, 212, 0.2);
+  border-radius: 50px;
+  border-bottom: 2px solid aquamarine;
+  border-left: 10px solid aquamarine;
+  border-right: 10px solid aquamarine;
+  box-shadow: 2px 0px 15px inset rgba(127, 255, 212, 0.4);
   max-height: 60vh;
   max-width: 90vw;
   min-width:65vw;
@@ -178,11 +180,11 @@ input {
   background: inherit;
   border-bottom: 2px solid aquamarine;
   border-right: 2px solid aquamarine;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: .7vh 1vw;
   flex-grow: 1;
   margin: .5vh 2vw;
-  box-shadow: 6px 5px 6px inset rgba(169, 244, 255, 0.19);
+  box-shadow: 4px 5px 6px rgba(40, 255, 165, 0.19);
 
 
 }
