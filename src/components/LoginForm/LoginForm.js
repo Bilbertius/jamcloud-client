@@ -26,7 +26,7 @@ export default class LoginForm extends Component {
 				password.value = ''
 				this.props.onLoginSuccess()
 			})
-			.catch(res => res.error)
+			.catch(res => this.setState({error: res.error}));
 	}
 	
 	render() {
@@ -38,7 +38,7 @@ export default class LoginForm extends Component {
 			>
 				<h2 id='login_header'>Login</h2>
 				
-				<div role='alert'>
+				<div className='alert' role='alert'>
 					{error && <p className='red'>{error}</p>}
 				</div>
 				<div className='user_name'>

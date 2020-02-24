@@ -2,6 +2,7 @@ Section.SongListPage {
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    margin-bottom: 12vh;
 
 }
 
@@ -10,19 +11,20 @@ ul.songlist {
     list-style-type: none;
     display: flex;
     flex-flow: row nowrap;
-    height: 14vh;
+    height: 12vh;
     text-align: left;
     align-self: center;
-    margin: 1vh 3vw;
-    padding: .5vh 0;
+    margin: 1vh 1vw;
+    padding: .1vh 0;
     border-radius: 5px;
-    min-width: 50vw;
+    width: 90vw;
     box-shadow:  2px 0px 12px inset rgba(129, 255, 212, 0.32);
     align-items: flex-start;
 }
 
 ul.songlist ul {
-    width: 55%;
+    width: 80%;
+    padding-left: 1vw;
 }
 
 span {
@@ -58,21 +60,23 @@ button#delete-song {
     left: 20vw;
 }
 .venue {
-    margin: 1vh 1vw;
+    margin: 1vh 0vw 1vh 0vw;
     font-size: 0.8em;
     text-align: right;
     flex-grow: 1;
     color: #a9f4ff;
 }
 
-@media only screen and (min-width: 500px) {
+
+
+@media only screen and (min-width: 450px) {
     ul.songlist {
-        width: 70vw;
+        width: 80vw;
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 850px) {
     ul.songlist {
-        width: 50vw;
+        width: 60vw;
     }
 }

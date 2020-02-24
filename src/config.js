@@ -1,6 +1,6 @@
 
 
 export default {
-	API_ENDPOINT: 'https://fathomless-sierra-25061.herokuapp.com/api' ,
-	API_KEY: process.env.REACT_APP_API_KEY
+	API_ENDPOINT: 'http://localhost:8000/api' ,
+	JWT_SECRET: process.env.REACT_APP_JWT_SECRET
 }

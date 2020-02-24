@@ -47,23 +47,23 @@ class Create extends React.Component {
 					<div>
 						
 						<span>
-							<input id='song' name='song' type="text" placeholder='Song'/>
+							<input id='song' name='song' type="text" placeholder='Song' required/>
 						</span>
 						
 						<span>
-							<input id='artist'  name='artist' type="text" placeholder='Artist'/>
+							<input id='artist'  name='artist' type="text" placeholder='Artist' required/>
 						</span>
 						
 						<span>
-							<input id='album'  name='album' type="text" placeholder='Album'/>
+							<input id='album'  name='album' type="text" placeholder='Album' required/>
 						</span>
 						
 						<span>
-							<input id='venue'  name='venue' type="text" placeholder='Venue'/>
+							<input id='venue'  name='venue' type="text" placeholder='Venue' required/>
 						</span>
 						
 						<span>
-							<input id='show_date'  name='show_date' type="date" placeholder='date'/>
+							<input id='show_date'  name='show_date' type="date" placeholder='date' required/>
 						</span>
 					</div>
 					

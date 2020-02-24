@@ -8,6 +8,7 @@ export default class RegistrationForm extends Component {
 		onRegistrationSuccess: () => {}
 	};
 	
+	state = {error: null}
 	
 	handleSubmit = ev => {
 		ev.preventDefault();
@@ -34,13 +35,14 @@ export default class RegistrationForm extends Component {
 	};
 	
 	render() {
-	
+		const { error } = this.state;
 		return (
 			<form
 				className='RegForm'
 				onSubmit={this.handleSubmit}
 			>
 			<h2 id='reg_header'>Register</h2>
+				<div className='alert' role='alert'>{error && <p className='red'>{error}</p>}</div>
 				<div className='user_name'>
 			
 					<Input
