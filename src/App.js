@@ -12,26 +12,23 @@ import RegistrationPage from './routes/RegistrationPage';
 
 
 export default class App extends React.Component {
-    state = {hasError: false}
+    state = {hasError: false};
     
     static getDerivedStateFromError(error) {
-        console.error(error)
+        console.error(error);
         return {hasError: true}
     }
  
     
     render() {
-        
-        
         return (
             <Router>
                 <header>
                     <Link to="/"><h1>JamCloud</h1></Link>
-                    
                     <nav>
                         <ul className='NavLinks'>
                             <li>
-                                <Link to='/songs'>Discover</Link>
+                                <Link to='/songs'>Jams</Link>
                             </li>
                             <li>
                                 <Link to='/maker'>Create</Link>

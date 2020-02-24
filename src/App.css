@@ -147,9 +147,7 @@ form {
   max-height: 60vh;
   width: 90vw;
   border-radius: 50px;
-  border-bottom: 2px solid aquamarine;
-  border-left: 10px solid aquamarine;
-  border-right: 10px solid aquamarine;
+  border-right: 5px solid aquamarine;
   box-shadow: 2px 0px 15px inset rgba(127, 255, 212, 0.4);
   max-height: 60vh;
   max-width: 90vw;

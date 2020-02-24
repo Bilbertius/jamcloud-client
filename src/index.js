@@ -8,10 +8,11 @@ import { SongProvider } from './contexts/SongContext';
 
 ReactDOM.render(
 	<BrowserRouter>
-					<SongListProvider>
-						<SongProvider>
-							<App />
-						</SongProvider>
-					</SongListProvider>
-				</BrowserRouter>,
+		<SongListProvider>
+			<SongProvider>
+				<App />
+			</SongProvider>
+		</SongListProvider>
+	</BrowserRouter>,
 	document.getElementById('root'));
+
