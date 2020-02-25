@@ -8,29 +8,29 @@ import RegistrationPage from '../../routes/RegistrationPage';
 export default class LoginForm extends Component {
 	static defaultProps = {
 		onLoginSuccess: () => {}
-	}
+	};
 	
-	state = { error: null }
+	state = { error: null };
 	
 	handleSubmitJwtAuth = ev => {
-		ev.preventDefault()
-		this.setState({ error: null })
-		const { user_name, password } = ev.target
+		ev.preventDefault();
+		this.setState({ error: null });
+		const { user_name, password } = ev.target;
 		
 		AuthApiService.postLogin({
 			user_name: user_name.value,
-			password: password.value,
+			password: password.value
 		})
 			.then(res => {
-				user_name.value = ''
-				password.value = ''
+				user_name.value = '';
+				password.value = '';
 				this.props.onLoginSuccess()
 			})
-			.catch(res => this.setState({error: res.error}));
+			.catch(res => this.setState({error: res}));
 	}
 	
 	render() {
-		const { error } = this.state
+		const { error } = this.state;
 		return (
 			<form
 				className='LoginForm'

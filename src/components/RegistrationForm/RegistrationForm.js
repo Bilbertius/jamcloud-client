@@ -76,7 +76,7 @@ export default class RegistrationForm extends Component {
 					</Input>
 				</div>
 				
-				<Button type='submit'>
+				<Button onSubmit={this.handleSubmit}type='submit'>
 					Register
 				</Button>
 			</form>

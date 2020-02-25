@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-
 import './SongListItem.css';
 import APIService from '../../services/APIService';
-import SongListContext from '../../contexts/SongListContext';
+import SongContext from '../../contexts/SongListContext';
 
 
 
@@ -12,13 +11,14 @@ import SongListContext from '../../contexts/SongListContext';
 export default class SongListItem extends Component {
     
     
-    static contextType = SongListContext;
+    static contextType = SongContext;
     
     
-    handleClickDelete = () => {
+    removeSong = () => {
         const songID = this.props.key;
         APIService.deleteSong(songID)
-            .then(this.context.deleteSong(songID))
+            .then(this.context.song(songID))
+            .catch(this.context.setError);
         
     };
     
@@ -39,7 +39,7 @@ export default class SongListItem extends Component {
                     <button
                         className='delete-button'
                         type='button'
-                        onClick={ this.handleClickDelete }>
+                        onClick={ this.props.removeSong }>
                     
                     >
                     X
