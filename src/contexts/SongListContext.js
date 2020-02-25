@@ -6,6 +6,7 @@ const SongListContext = React.createContext({
     setError: () => {},
     clearError: () => {},
     setSongList: () => {},
+    deleteSong: () => {}
 });
 
 export default SongListContext;

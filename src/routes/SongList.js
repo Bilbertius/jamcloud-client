@@ -8,6 +8,9 @@ import SongListItem from '../components/SongListItem/SongListItem';
 export default class SongList extends Component {
 	static contextType = SongListContext;
 	
+	
+	
+	
 	componentDidMount() {
 		this.context.clearError();
 		APIService.getSongs()
@@ -21,6 +24,7 @@ export default class SongList extends Component {
 			<SongListItem
 				key={song.id}
 				song={song}
+				removeSong={() => this.removeSong}
 			/>
 		)
 	}

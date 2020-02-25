@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "name": "jamcloud",
-  "routes": [
-    { "src": "/.*", "dest": "/index.html" },
-    { "handle": "filesystem"}
-  ]
-}
