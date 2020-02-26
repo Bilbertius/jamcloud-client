@@ -42,7 +42,7 @@ export default class RegistrationForm extends Component {
 				onSubmit={this.handleSubmit}
 			>
 			<h2 id='reg_header'>Register</h2>
-				<div className='alert' role='alert'>{error && <p className='red'>{error}</p>}</div>
+				
 				<div className='user_name'>
 			
 					<Input
