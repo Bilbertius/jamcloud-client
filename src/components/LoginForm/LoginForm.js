@@ -40,9 +40,7 @@ export default class LoginForm extends Component {
 			>
 				<h2 id='login_header'>Login</h2>
 				
-				<div className='alert' role='alert'>
-					{error && <p className='red'>{error}</p>}
-				</div>
+			
 				<div className='user_name'>
 				
 					<Input
