@@ -3,7 +3,7 @@ import config from '../config';
 
 
 
-const APIService = {
+const SongsApiService = {
 	getSongs() {
 		return fetch(`${config.API_BASE_URL}/songs`, {
 			method: 'GET',
@@ -59,4 +59,4 @@ const APIService = {
 };
 
 
-export default APIService;
+export default SongsApiService;

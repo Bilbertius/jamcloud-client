@@ -1,5 +1,5 @@
 import React from 'react';
-import APIService from '../../services/APIService';
+import SongsApiService from '../../services/songs-api-service';
 
 
 
@@ -17,7 +17,7 @@ class Create extends React.Component {
 		this.setState({ error: null })
 		const { song, artist, album, venue, show_date } = e.target
 		
-		APIService.postSong({
+		SongsApiService.postSong({
 			song: song.value,
 			artist: artist.value,
 			album: album.value,

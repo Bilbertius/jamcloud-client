@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import AuthApiService from '../../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
 import RegistrationPage from '../../routes/RegistrationPage';
+import TokenService from '../../services/token-service';
 
 export default class LoginForm extends Component {
 	static defaultProps = {
@@ -15,21 +16,19 @@ export default class LoginForm extends Component {
 	handleSubmitJwtAuth = ev => {
 		ev.preventDefault();
 		const { user_name, password } = ev.target;
-		
 		this.setState({ error: null });
 		AuthApiService.postLogin({
 			user_name: user_name.value,
 			password: password.value
-		})
-			.then(user => {
-				user_name.value = '';
-				password.value = '';
+		}).then(res => {
+			TokenService.saveAuthToken(res.authToken)
 				this.props.onLoginSuccess()
 			})
-			.catch(res => {
-				this.setState({error: res.error});
+			.catch(err => {
+				this.setState({error: err});
 			})
-	}
+		}
+	
 	
 	render() {
 		const { error } = this.state;
@@ -39,7 +38,9 @@ export default class LoginForm extends Component {
 				onSubmit={this.handleSubmitJwtAuth}
 			>
 				<h2 id='login_header'>Login</h2>
-				
+				<div role='alert'>
+					{error && <p className='errorMessage'>{error}</p>}
+				</div>
 			
 				<div className='user_name'>
 				
@@ -72,5 +73,5 @@ export default class LoginForm extends Component {
 			
 			</form>
 		)
-	}
+	};
 }

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import SongListContext from '../contexts/SongListContext';
-import APIService from '../services/APIService';
+import SongsApiService from '../services/songs-api-service';
 import { Section } from '../components/Utils/Utils';
 import SongListItem from '../components/SongListItem/SongListItem';
 
@@ -13,7 +13,7 @@ export default class SongList extends Component {
 	
 	componentDidMount() {
 		this.context.clearError();
-		APIService.getSongs()
+		SongsApiService.getSongs()
 			.then(this.context.setSongList)
 			.catch(this.context.setError)
 	}
