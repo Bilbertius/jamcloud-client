@@ -1,38 +1,35 @@
 import React, { Component } from 'react'
 import { Button, Input } from '../Utils/Utils'
-
 import AuthApiService from '../../services/auth-api-service';
 
 export default class RegistrationForm extends Component {
 	static defaultProps = {
 		onRegistrationSuccess: () => {}
-	};
+	}
 	
 	state = {error: null}
 	
 	handleSubmit = ev => {
 		ev.preventDefault();
 		const { user_name, user_email, password} = ev.target;
+		this.setState({ error: null })
+		AuthApiService.postUser({
+			user_name: user_name.value,
+			user_email:user_email.value,
+			password: password.value
 		
 			
-			this.setState({error: null});
-			AuthApiService.postUser({
-				user_name: user_name.value,
-				user_email: user_email.value,
-				password: password.value,
-				
+		})
+			.then(newUser => {
+				user_name.value = '';
+				user_email.value = '';
+				password.value = '';
+				this.props.onRegistrationSuccess()
 			})
-				.then(user => {
-					user_name.value = '';
-					user_email.value = '';
-					password.value = '';
-					this.props.onRegistrationSuccess();
-				})
-				.catch(res => {
-					this.setState({error: res.error});
-				})
-		
-	};
+			.catch(res => {
+				this.setState({ error: res.error })
+			})
+	}
 	
 	render() {
 		const { error } = this.state;
@@ -42,9 +39,7 @@ export default class RegistrationForm extends Component {
 				onSubmit={this.handleSubmit}
 			>
 			<h2 id='reg_header'>Register</h2>
-				<div role='alert'>
-					{error && <p className='errorMessage'>{error}</p>}
-				</div>
+				
 				<div className='user_name'>
 			
 					<Input

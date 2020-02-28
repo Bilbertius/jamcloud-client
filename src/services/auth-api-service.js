@@ -2,11 +2,11 @@ import config from '../config'
 
 const AuthApiService = {
 	postLogin({user_name, password}) {
-		return fetch(`${config.API_BASE_URL}/login`, {
+		return fetch(`${config.API_BASE_URL}/auth/login`, {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',
-				"Access-Control-Allow-Origin" : "*"
+			
 			},
 			body: JSON.stringify({user_name, password}),
 		})

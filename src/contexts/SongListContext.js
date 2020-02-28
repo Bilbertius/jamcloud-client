@@ -22,7 +22,7 @@ export class SongListProvider extends Component {
     };
 
     setError = error => {
-        console.error(error.message);
+        console.error(error);
         this.setState({error})
     };
     
