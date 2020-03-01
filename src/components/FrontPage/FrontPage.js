@@ -8,10 +8,10 @@ function FrontPage(props) {
 			<ul className="featureSet">
 				<li><p>Keep track of your favorite jams.</p></li>
 				<li>
-					<p>See how your favorites rank amongst others.</p>
+					<p>Never forget which jams make your body wiggle.</p>
 				</li>
 				<li>
-					<p>Differentiate between jams by tagging them. </p>
+					<p>Login or register by clicking login below to get started.</p>
 				</li>
 			</ul>
 		</>

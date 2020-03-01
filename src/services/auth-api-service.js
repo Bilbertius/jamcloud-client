@@ -16,7 +16,7 @@ const AuthApiService = {
 					: res.json()
 			)
 	},
-	postUser({newUser}) {
+	postUser(newUser) {
 		return fetch(`${config.API_BASE_URL}/users`, {
 			method: 'POST',
 			headers: {

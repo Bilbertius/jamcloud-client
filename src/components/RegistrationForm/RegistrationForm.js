@@ -9,18 +9,18 @@ export default class RegistrationForm extends Component {
 	
 	state = {error: null}
 	
-	handleSubmit = ev => {
-		ev.preventDefault();
-		const { user_name, user_email, password} = ev.target;
-		this.setState({ error: null })
+	handleSubmitUser = e => {
+		e.preventDefault();
+		const { user_name, user_email, password} = e.target;
+		this.setState({ error: null });
 		AuthApiService.postUser({
 			user_name: user_name.value,
-			user_email:user_email.value,
+			user_email: user_email.value,
 			password: password.value
-		
+			
 			
 		})
-			.then(newUser => {
+			.then(res => {
 				user_name.value = '';
 				user_email.value = '';
 				password.value = '';
@@ -36,7 +36,7 @@ export default class RegistrationForm extends Component {
 		return (
 			<form
 				className='RegForm'
-				onSubmit={this.handleSubmit}
+				onSubmit={this.handleSubmitUser}
 			>
 			<h2 id='reg_header'>Register</h2>
 				
@@ -73,7 +73,7 @@ export default class RegistrationForm extends Component {
 					</Input>
 				</div>
 				
-				<Button onSubmit={this.handleSubmit}type='submit'>
+				<Button type='submit'>
 					Register
 				</Button>
 			</form>

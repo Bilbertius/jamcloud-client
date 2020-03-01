@@ -5,6 +5,7 @@ import './SongListItem.css';
 export default class SongListItem extends Component {
     static defaultProps = {
         onDeleteSong: () => {
+            window.location.push('/')
         }
     }
 

@@ -4,5 +4,5 @@ import Create from "./src/components/CreateSong/Create";
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");
-	ReactDOM.render(<Create / >,  div);
+	ReactDOM.render(<Create />,  div);
 }

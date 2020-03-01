@@ -17,8 +17,8 @@ class Create extends React.Component {
 	
 	handleSubmitSong = e => {
 		e.preventDefault();
-		this.setState({ error: null })
-		const { song, artist, album, venue, show_date } = e.target
+		this.setState({ error: null });
+		const { song, artist, album, venue, show_date } = e.target;
 		
 		SongsApiService.postSong({
 			song: song.value,
