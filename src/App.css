@@ -76,7 +76,16 @@ input {
   align-items: flex-start;
 
 }
+.delete-button {
+  position: relative;
+  bottom:5vh;
+  left:-1vh;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 
+
+}
 
 .userProfile h3 {
   align-self: flex-end
@@ -131,7 +140,7 @@ Section.RegistrationPage {
   margin: auto 3px;
 }
 #reglink-span {
-  color: rgba(255, 228, 196, 0.31);
+  color: rgba(129, 206, 228, 0.62);
   text-align: center;
   display: flex;
   justify-content: center;
