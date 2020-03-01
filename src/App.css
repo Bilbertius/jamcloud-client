@@ -227,7 +227,7 @@ button {
   border: 2px outset #a9f4ff;
   background: inherit;
   box-shadow: 0 0 15px inset rgba(169, 244, 255, 0.34);
-
+  margin-bottom: 5vh;
 }
 
 
