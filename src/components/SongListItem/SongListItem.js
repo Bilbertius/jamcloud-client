@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import SongsApiService from '../../services/songs-api-service';
 import './SongListItem.css';
+import SongListContext from '../../contexts/SongListContext';
 
 export default class SongListItem extends Component {
+    static contextType = SongListContext;
     static defaultProps = {
-        onDeleteSong: () => {
-            window.location.push('/')
-        }
-    }
+        onDeleteSong: () => {}
+        
+    };
 
 
     handleClickDelete(event) {
         const songID = event.target.id;
         SongsApiService.deleteSong(songID)
             .then(() => {
+                console.log(this.context)
                 this.context.deleteSong(songID);
                 this.props.onDeleteSong(songID);
+               
         })
  }
 

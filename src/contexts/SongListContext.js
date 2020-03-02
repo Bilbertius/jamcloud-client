@@ -30,6 +30,14 @@ export class SongListProvider extends Component {
         this.setState({error: null})
     };
     
+    deleteSong = (songID) => {
+        let newSongList = this.songList.filter(song => {
+            return songID !== song.id
+        })
+        this.setSongList(newSongList);
+        
+    };
+    
     render() {
         const value = {
             songList: this.state.songList,
@@ -37,6 +45,7 @@ export class SongListProvider extends Component {
             setError: this.setError,
             clearError: this.clearError,
             setSongList: this.setSongList,
+            deleteSong: this.deleteSong
         };
 
         return (

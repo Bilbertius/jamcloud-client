@@ -18,13 +18,17 @@ export default class SongList extends Component {
 			.catch(this.context.setError)
 	}
 	
+	handleDeleteSong(songID) {
+		this.props.history.push('/songs')
+	}
+	
 	renderSongs() {
 		const { songList = [] } = this.context;
 		return songList.map(song =>
 			<SongListItem
 				key={song.id}
 				song={song}
-				removeSong={() => this.removeSong}
+				onDeleteSong={this.handleDeleteSong}
 			/>
 		)
 	}

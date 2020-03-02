@@ -78,11 +78,13 @@ input {
 }
 .delete-button {
   position: relative;
-  bottom:5vh;
+  bottom:3vh;
   left:-1vh;
   border: none;
   padding: 0;
   box-shadow: none;
+  color: rgba(105, 177, 185, 0.77);
+  cursor: pointer;
 
 
 }
@@ -228,6 +230,7 @@ button {
   background: inherit;
   box-shadow: 0 0 15px inset rgba(169, 244, 255, 0.34);
   margin-bottom: 5vh;
+
 }
 
 
