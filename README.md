@@ -13,7 +13,7 @@ Jamcloud allows users to keep track of the various live recordings that their fa
 - ExpressJS
 - PostgreSQL
 
-##Screenshots 
+## Screenshots 
 
 - ![](images/image1.png)
 - ![](images/image2.png)
