@@ -22,9 +22,13 @@ const SongsApiService = {
 				'content-type': 'application/json',
 				'authorization': `bearer ${TokenService.getAuthToken()}`
 			},
+			body: JSON.stringify(songID)
 		})
+			.then(res => {
+				!res.ok ? res.json().then(e => Promise.reject(e.statusText))
+					: res.json()
+			})
 		
-			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
 	},
 	
 	postSong(song) {

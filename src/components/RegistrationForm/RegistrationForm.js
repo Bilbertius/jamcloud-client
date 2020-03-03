@@ -11,8 +11,9 @@ export default class RegistrationForm extends Component {
 	
 	handleSubmitUser = e => {
 		e.preventDefault();
-		const { user_name, user_email, password} = e.target;
+	
 		this.setState({ error: null });
+		const { user_name, user_email, password} = e.target;
 		AuthApiService.postUser({
 			user_name: user_name.value,
 			user_email: user_email.value,
@@ -32,7 +33,7 @@ export default class RegistrationForm extends Component {
 	}
 	
 	render() {
-		const { error } = this.state;
+
 		return (
 			<form
 				className='RegForm'

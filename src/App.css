@@ -181,6 +181,11 @@ span {
   width: 80%;
 }
 
+
+.delete {
+  display: none;
+}
+
 ::placeholder {
   color: #a9f4ff;
   font-size: 1.1em;
