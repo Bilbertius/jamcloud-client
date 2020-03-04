@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SongsApiService from '../../services/songs-api-service';
-import propTypes from 'prop-types';
+
 import './SongListItem.css';
 import SongListContext from '../../contexts/SongListContext';
 
@@ -13,24 +13,24 @@ export default class SongListItem extends Component {
     
     state = {
         error: null,
-        class: 'songlist'
+        
     }
 
 
     handleClickDelete(event) {
 
-        const songID = event.target.id;
+        const song_id = this.props.song.id;
   
-        this.context.deleteSong(songID);
+        this.context.deleteSong(song_id);
       
-        this.setState({class: 'delete'})
-        SongsApiService.deleteSong(songID)
+        
+        SongsApiService.deleteSong(song_id)
             .then((res) => {
                 
                 this.props.onDeleteSong();
                
                
-        })
+        });
         this.setState({class: 'deleted'})
     
     }
@@ -52,7 +52,7 @@ export default class SongListItem extends Component {
                             <span className='venue'>{song.date} @ {song.venue}</span>
                         </li>
                     </ul>
-                    <button className='delete-button' id={song.id} type='button' onClick={() => this.handleClickDelete}>X</button>
+                    <button className='delete-button' song_id={song.id} type='button' onClick={this.handleClickDelete}>X</button>
                 </ul>
             </>
         )}

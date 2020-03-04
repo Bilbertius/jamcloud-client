@@ -15,14 +15,14 @@ const SongsApiService = {
 			.then(res => !res.ok ? res.json().then(err => Promise.reject(err.statusText)) : res.json())
 	},
 	
-	deleteSong(songID) {
+	deleteSong(song_id) {
 		return fetch(`${config.API_BASE_URL}/songs/${songID}`, {
 			method: 'DELETE',
 			headers: {
 				'content-type': 'application/json',
 				'authorization': `bearer ${TokenService.getAuthToken()}`
 			},
-			body: JSON.stringify(songID)
+			body: JSON.stringify(song_id)
 		})
 			.then(res => {
 				!res.ok ? res.json().then(e => Promise.reject(e.statusText))

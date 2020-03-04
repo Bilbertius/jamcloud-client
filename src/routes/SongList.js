@@ -25,6 +25,7 @@ export default class SongList extends Component {
 		return songList.map(song =>
 			<SongListItem
 				key={song.id}
+				
 				song={song}
 				onDeleteSong={this.context.setSongList}
 			/>
