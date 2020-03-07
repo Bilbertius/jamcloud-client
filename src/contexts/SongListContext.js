@@ -30,10 +30,10 @@ export class SongListProvider extends Component {
         this.setState({error: null})
     };
     
-    deleteSong = (songID) => {
+    deleteSong = (song_id) => {
         
-        let newSongList = this.context.filter(id => songID === id);
-        this.setSongList({newSongList});
+        let newSongList = this.state.songList.filter(id => id !== song_id);
+        this.setSongList(newSongList);
         
     };
     

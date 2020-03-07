@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import SongList from '../../routes/SongList';
+import ListSong from '../../routes/ListSong';
 import './Discover.css';
 
 function Discover(props) {
@@ -9,7 +9,7 @@ function Discover(props) {
 		
 		<Switch>
 			<Route path='/songs'>
-				<SongList />
+				<ListSong />
 			</Route>
 		</Switch>
 	</Router>
