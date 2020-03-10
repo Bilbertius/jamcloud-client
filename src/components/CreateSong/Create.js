@@ -6,7 +6,7 @@ import SongsApiService from '../../services/songs-api-service';
 class Create extends React.Component {
 	static defaultProps = {
 		onSubmitSongSuccess: () => {
-		
+			this.history.push('/songs')
 		}
 	}
 	

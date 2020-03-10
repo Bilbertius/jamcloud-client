@@ -1,19 +1,21 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import ListSong from '../../routes/ListSong';
-import './Discover.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./Discover.css";
+import SongList from "../../routes/SongList";
 
-function Discover(props) {
-	return (
-	<Router className="discoveryLists">
-		
-		<Switch>
-			<Route path='/songs'>
-				<ListSong />
-			</Route>
-		</Switch>
-	</Router>
-	)
+
+class Discover extends React.Component {
+  render() {
+    return (
+      <Router className="discoveryLists">
+        <Switch>
+          <Route exact path="/songs">
+            
+            <SongList />
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
 }
-
 export default Discover;

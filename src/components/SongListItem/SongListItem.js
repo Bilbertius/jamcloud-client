@@ -1,30 +1,28 @@
-import React from 'react';
+import React from "react";
 
-
-import './SongListItem.css';
-
+import "./SongListItem.css";
 
 export default function SongListItem(props) {
-    
-    
-    
+  const { song, deleteSong } = props;
+  return (
+    <>
+      <li className="songListItem">
+        <span className="song">{song.song}</span>
+      
+          <span className="artist">{song.artist}</span>
         
-        return (
-            <>
-                <ul className='songlist'>
-                    <ul>
-                        <li><span className='song'>{props.song.song}</span></li>
-                        
-                        <li><span className='artist'>{props.song.artist}</span></li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <span className='venue'>{props.song.date} @ {props.song.venue}</span>
-                        </li>
-                        
-                    </ul>
-                </ul>
-            </>
-        )
-};
 
+      
+            <span className="venue">
+              {song.date} @ {song.venue}
+            </span>
+        <span>
+          <button id='delete-song' type="button" onClick={() => deleteSong(song.id)}>
+            X
+          </button>
+  
+        </span>
+      </li>
+    </>
+  );
+}

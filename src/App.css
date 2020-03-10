@@ -115,7 +115,9 @@ Section.RegistrationPage {
   color: aquamarine;
  }
 
-
+.error {
+  color: #ff0100;
+}
 
 
 .user_name {

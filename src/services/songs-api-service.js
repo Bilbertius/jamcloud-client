@@ -10,7 +10,7 @@ const SongsApiService = {
 		return fetch(`${config.API_BASE_URL}/songs`, {
 			method: 'GET',
 			headers: {
-				'content-type' : 'application/json',
+				'content-type': 'application/json',
 				'authorization': `bearer ${TokenService.getAuthToken()}`
 			}
 		})
@@ -29,8 +29,8 @@ const SongsApiService = {
 			}
 			
 		})
-			.then(res => res.ok ? Promise.resolve('Deleted note successfully') : Promise.reject('Cannot delete note'))
-			
+			.then(res => res.ok ? Promise.resolve('Deleted song successfully') : Promise.reject('Cannot delete song'))
+			.then(data => JSON.stringify(data))
 			.catch(err => console.log(err))
 			
 
