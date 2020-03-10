@@ -14,6 +14,7 @@ exports[`Create component renders Create given props 1`] = `
           id="song"
           name="song"
           placeholder="Song"
+          required={true}
           type="text"
         />
       </span>
@@ -22,6 +23,7 @@ exports[`Create component renders Create given props 1`] = `
           id="artist"
           name="artist"
           placeholder="Artist"
+          required={true}
           type="text"
         />
       </span>
@@ -30,6 +32,7 @@ exports[`Create component renders Create given props 1`] = `
           id="album"
           name="album"
           placeholder="Album"
+          required={true}
           type="text"
         />
       </span>
@@ -38,6 +41,7 @@ exports[`Create component renders Create given props 1`] = `
           id="venue"
           name="venue"
           placeholder="Venue"
+          required={true}
           type="text"
         />
       </span>
@@ -46,6 +50,7 @@ exports[`Create component renders Create given props 1`] = `
           id="show_date"
           name="show_date"
           placeholder="date"
+          required={true}
           type="date"
         />
       </span>
