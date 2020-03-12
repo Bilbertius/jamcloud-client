@@ -17,7 +17,7 @@ class Create extends React.Component {
     e.preventDefault();
     this.setState({ error: null });
     const { song, artist, album, venue, show_date } = e.target;
-
+    const newSong = { song, artist, album, venue, show_date}
     SongsApiService.postSong({
       song: song.value,
       artist: artist.value,
@@ -26,13 +26,13 @@ class Create extends React.Component {
       show_date: show_date.value
     })
       .then(res => {
-      	console.log(JSON.stringify(res));
+    
         song.value = "";
         artist.value = "";
         album.value = "";
         venue.value = "";
         show_date.value = "";
-        this.context.addSong = {};
+        this.context.addSong(newSong);
         this.props.onSubmitSongSuccess();
       })
       .catch(res => {
