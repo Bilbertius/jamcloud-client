@@ -46,7 +46,7 @@ const SongsApiService = {
 			},
 			body: JSON.stringify(song)
 		})
-			.then(res => !res.ok ? res.json().then(e => Promise.reject(e)) : res.json())
+			.then(res => res.ok ? Promise.resolve( res.json()) : Promise.reject('Cant post song'));
 
 	}
 	

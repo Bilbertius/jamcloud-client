@@ -16,7 +16,7 @@ export default function SongListItem(props) {
             <span className="venue">
               {song.date} @ {song.venue}
             </span>
-        <span>
+        <span id="button-span">
           <button id='delete-song' type="button" onClick={() => deleteSong(song.id)}>
             X
           </button>

@@ -4,80 +4,76 @@ Section.SongListPage {
     align-content: center;
     margin-bottom: 12vh;
 
+    max-width: 100vw;
+}
+
+Section.SongListPage ul, li {
+    padding: 0;
 }
 
 li.songListItem {
     display: flex;
-    padding:1vh 1vw;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    width: 80vw;
+    width: 90vw;
     align-items: center;
     background: #254f60;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2b4e79, #392c80, #101c4b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2a3d79, #2c1780, #18284b);
+    background: -webkit-linear-gradient(to left, #024552, #023d49, #101c4b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #023846, #023d49, #18284b);
     margin-bottom: 2vh;
-    max-height: 10vh;
-    border-radius: 5px;
+    max-height: 5vh;
+    border-radius: 10px;
     box-shadow: 1px 3px 6px rgba(9, 191, 171, 0.49);
+    overflow: hidden;
+
 
 }
 
-ul.songlist {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
-    height: 12vh;
-    text-align: left;
-    align-self: center;
-    margin: 1vh 1vw;
-    padding: .1vh 0;
-    border-radius: 5px;
-    width: 90vw;
-    box-shadow:  2px 0px 12px inset rgba(129, 255, 212, 0.32);
-    align-items: flex-start;
-}
 
 ul.songlist ul {
     width: 80%;
-    padding-left: 1vw;
 }
 
 span {
-    margin: 2vh 2vw;
+    margin: 2vh .5vw;
 }
 .song {
 
-    font-size: .9em;
+    font-size: 1em;
     text-align: left;
     font-weight: bold;
     flex-grow: 2;
-    color: #a9f4ff;
+    color: #00e3bb;
+    padding:0 1em;
 }
 .artist {
     flex-grow: 2;
-    font-size: 0.8em;
-    font-weight: lighter;
+    font-size: 1.2em;
+
     text-align: center;
-    color: #a9f4ff;
+
+    color:#a9f4ff ;
 }
 
 
 button#delete-song {
     border: none;
-    padding: 3px;
-    background-color: hsla(348, 91%, 56%, 0.7);
+    padding: 0 1em;
+    color: rgba(169, 89, 89, 0.85);
     margin: 0 0 0 auto;
     flex-shrink: 1;
+    background: transparent;
+    box-shadow: none;
+
 
 }
 
 
 .venue {
-    margin: 1vh 1vw 1vh 0vw;
-    font-size: 0.7em;
-    text-align: right;
 
+    font-size: 1.2em;
+    text-align: right;
+    flex-grow: 3;
     color: #a9f4ff;
 }
 

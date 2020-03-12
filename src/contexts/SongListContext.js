@@ -20,7 +20,8 @@ export class SongListProvider extends Component {
   }
   
   componentDidMount() {
-    SongsApiService.getSongs().then(songList => this.setState({ songList }));
+    SongsApiService.getSongs()
+        .then(songList => this.setState({ songList : [...songList] }));
   }
 
   setSongList = songList => {
@@ -28,7 +29,7 @@ export class SongListProvider extends Component {
   };
 
   setError = error => {
-    console.error(error);
+   
     this.setState({ error: error });
   };
 
@@ -37,7 +38,9 @@ export class SongListProvider extends Component {
   };
 
   addSong = newSong => {
-    this.setSongList(...this.songList, newSong);
+    const newSongList = [newSong, ...this.state.songList];
+    this.setSongList(newSongList);
+    this.componentDidMount();
   };
   deleteSong = song_id => {
     SongsApiService.deleteSong(song_id);

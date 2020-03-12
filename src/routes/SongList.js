@@ -7,8 +7,13 @@ import SongListContext from "../contexts/SongListContext";
 export default class SongList extends Component {
   static contextType = SongListContext;
 
-  renderSongs() {
-   
+  state = {
+    isLoading: false,
+    songList: this.context.songList
+  }
+  
+  /*
+    renderSongs() {
     const { songList, deleteSong } = this.context;
     return songList.map(song => (
       <SongListItem
@@ -19,19 +24,25 @@ export default class SongList extends Component {
       />
     ));
   }
-
+*/
+  
   render() {
-    const { error } = this.context;
+    const { songList, deleteSong, error } = this.context;
     return (
-      <Section list className="SongListPage">
+        <Section className='SongListPage'>
+          {error ? <p>{error.message}</p> : null}
         <ul>
-          {error ? (
-            <p className="red">There was an error, try again</p>
-          ) : (
-            this.renderSongs()
-          )}
+          {songList.map(song => (
+              <SongListItem
+                key={song.id}
+                song={song}
+                deleteSong={() => deleteSong(song.id)}
+              />
+          ))}
         </ul>
-      </Section>
+        </Section>
+            
+            
     );
   }
 }
