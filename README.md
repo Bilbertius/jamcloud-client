@@ -18,3 +18,4 @@ Jamcloud allows users to keep track of the various live recordings that their fa
 - ![](images/image-one.png)
 - ![](images/image-two.png)
 - ![](images/image-three.png)
+- ![](images/image-four.png)
