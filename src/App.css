@@ -172,6 +172,12 @@ form {
   min-width: 65vw;
   justify-content: space-around;
 }
+
+ div#input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 div {
   display: flex;
   align-content: center;
@@ -235,7 +241,7 @@ input:internal-autofill-selected {
 }
 #show_date {
   color: #a9f4ff;
-  font-size: 1.3em;
+  font-size: 1.8vh;
 }
 
 label {

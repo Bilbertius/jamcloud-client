@@ -45,7 +45,7 @@ class Create extends React.Component {
       <>
         <form onSubmit={this.handleSubmitSong}>
           <h3>Add Song</h3>
-          <div>
+          <div id='input-wrapper'>
             <span>
               <input
                 id="song"
