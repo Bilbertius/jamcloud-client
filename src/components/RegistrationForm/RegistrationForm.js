@@ -39,8 +39,9 @@ export default class RegistrationForm extends Component {
 				className='RegForm'
 				onSubmit={this.handleSubmitUser}
 			>
+			
 			<h2 id='reg_header'>Register</h2>
-				
+				{this.state.error ? <p className='error'>{this.state.error}</p> : null}
 				<div className='user_name'>
 			
 					<Input

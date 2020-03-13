@@ -166,7 +166,7 @@ form {
   border-radius: 50px;
   border-left: 2px solid aquamarine;
   border-right: 2px solid aquamarine;
-  box-shadow: 0px 6px 15px aquamarine;
+  box-shadow: -.5vw 1vh 2vh rgba(0, 159, 128, 0.25);
   max-height: 60vh;
   max-width: 90vw;
   min-width: 65vw;
@@ -197,19 +197,42 @@ span#button-span {
 }
 
 input {
-  width: 70vw;
+  width: 80vw;
   border: none;
   background: inherit;
   border-bottom: 2px solid aquamarine;
   border-right: 2px solid aquamarine;
   border-radius: 5px;
   padding: 0.7vh 1vw;
-  font-size: 1.2em;
+  font-size: 1.7vh;
   flex-grow: 1;
   margin: 0.5vh 2vw;
-  box-shadow: 4px 5px 6px rgba(40, 255, 165, 0.19);
+  box-shadow: 2px 9px 16px rgba(40, 255, 165, 0.19);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid inherit;
+  -webkit-text-fill-color: aquamarine;
+  -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:active {
+  background-color: inherit;
+  outline-color: aquamarine;
+}
+
+input:internal-autofill-selected {
+  background-color: inherit !important;
+}
 #show_date {
   color: #a9f4ff;
   font-size: 1.3em;
@@ -242,6 +265,6 @@ button {
     width: 50vw;
   }
   input {
-    width: 35vw;
+    width: 50vw;
   }
 }
