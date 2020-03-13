@@ -7,7 +7,7 @@ import config from '../config';
 const SongsApiService = {
 	
 	getSongs() {
-		return fetch(`https://damp-eyrie-72462.herokuapp.com/api/songs`, {
+		return fetch(`${config.API_BASE_URL}/songs`, {
 			method: 'GET',
 			headers: {
 				'content-type': 'application/json',
