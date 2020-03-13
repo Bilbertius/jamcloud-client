@@ -21,12 +21,11 @@ li.songListItem {
     background: -webkit-linear-gradient(to left, #024552, #023d49, #101c4b);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #023846, #023d49, #18284b);
     margin-bottom: 2vh;
-    max-height: 5vh;
+    max-height: 7vh;
     border-radius: 10px;
     box-shadow: 1px 3px 6px rgba(9, 191, 171, 0.49);
     overflow: hidden;
-
-
+    padding: 1.5vh 0;
 }
 
 
