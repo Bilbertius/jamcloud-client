@@ -66,6 +66,10 @@ ul.NavLinks a {
 }
 input {
   color: #a9f4ff;
+  font-size: 2.5vh !important;
+}
+input:active {
+  font-size: 2.5vh !important;
 }
 
 .alert {

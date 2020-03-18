@@ -1,5 +1,14 @@
 # Jamcloud-client
-Jamcloud allows users to keep track of the various live recordings that their favorite artists have performed. With so many vastly different versions of the same song it can be near impossible to remember which versions stick out. Writing them down on paper doesn't fully solve the problem as you will end up with a list that is hard to search through and potentially littered with duplicates. Future features include a ranking system so that users can compare their favorites with other fans as well as discover jams they may be un familiar with. 
+Jamcloud allows users to keep track of 
+the various live recordings that their 
+favorite artists have performed. With so
+ many vastly different versions of the 
+ same song it can be near impossible to 
+ remember which versions stick out. Writing
+  them down on paper doesn't fully solve the
+   problem as you will end up with a list that 
+   is hard to search through and potentially plagued 
+    with duplicates and errors. 
 
 
 ## Links 
@@ -19,6 +28,16 @@ Jamcloud allows users to keep track of the various live recordings that their fa
 - NodeJS 
 - ExpressJS
 - PostgreSQL
+
+| Method | Path               | Description |
+|--------| -------------------| -------------------|
+| GET    | /songs             | get all songs in the database |
+| POST   | /users/            | create a new user |
+| GET    | /users/songs/${id} | get all songs posted by a user|
+| DELETE | /songs             | delete a song from the users list |
+| PATCH  | /songs             | update a listed song (upcoming)| 
+
+
 
 ## Screenshots 
 -![](images/image-four.png)
