@@ -11,6 +11,7 @@ header {
 
 header h1 {
   align-self: center;
+  margin: 0 20%;
 }
 
 li > p {
@@ -19,7 +20,17 @@ li > p {
 }
 
 header h1 {
-  color: #a9f4ff;
+  font-family: Phosphate;
+  letter-spacing: .1em;
+  color: #0080be;
+  font-size: 2.5em;
+  text-shadow:
+  -1px -1px 1px #004cff,
+  -3px -3px 3px #0145c4,
+  -4px -4px 4px #555555,
+  1px 1px 1px #291b46,
+  2px 2px 4px #00008f,
+  6px 6px 6px #1f1f21;
 }
 nav ul {
   position: fixed;
@@ -30,26 +41,15 @@ nav ul {
   left: 0;
   display: flex;
   justify-content: space-between;
-  border-top: 4px solid #a9f4ff;
+  box-shadow: 0 -3px 8px #7f7f7f;
   height: 10vh;
   width: 100vw;
-  background: #0f2027; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 nav {
   width: 100vw;
+  background-color: #272c32;
 }
 
 ul {
@@ -62,14 +62,14 @@ ul.NavLinks {
 }
 ul.NavLinks a {
   text-decoration: none;
-  color: aquamarine;
+  color: #bddbd2;
 }
 input {
-  color: #a9f4ff;
-  font-size: 2.5vh !important;
+
+  font-size: 2vh !important;
 }
 input:active {
-  font-size: 2.5vh !important;
+  font-size: 2vh !important;
 }
 
 .alert {
@@ -165,19 +165,18 @@ form {
   align-self: center;
   align-items: center;
   padding: 2vh 3vw;
-
+  background-color: #303030;
   width: 90vw;
   margin-right: 5vw;
   margin-left: 5vw;
-  border-radius: 50px;
-  border-left: 2px solid aquamarine;
-  border-right: 2px solid aquamarine;
-  box-shadow: -.5vw 1vh 2vh rgba(0, 159, 128, 0.25);
-  max-height: 70vh;
+  border-radius: 20px;
+
+  box-shadow:10px 10px 22px hsl(0, 0%, 15%), -1px -1px 5px inset hsla(0, 0%, 15%, 1), 3px 3px 6px inset hsl(0, 0%, 25%), -10px -10px 22px hsl(0, 0%, 25%);
+
+  min-height: 60vh;
   max-width: 90vw;
   min-width: 65vw;
   justify-content: space-around;
-
 }
 
  div#input-wrapper {
@@ -205,22 +204,25 @@ span#button-span {
 }
 
 ::placeholder {
-  color: #a9f4ff;
-  font-size: 1.1em;
+  color: #cbcbcb;
+  font-size: .8em;
 }
 
 input {
   width: 80vw;
   border: none;
-  background: inherit;
-  border-bottom: 2px solid aquamarine;
-  border-right: 2px solid aquamarine;
-  border-radius: 5px;
-  padding: 0.7vh 1vw;
-  font-size: 1.7vh;
+  background-color: hsl(0, 0%, 28%);
+  color: #cbcbcb;
+  border-radius: 10px;
+  padding: 0.7vh 2vw;
+  font-size: 1em;
   flex-grow: 1;
   margin: 0.5vh 2vw;
-  box-shadow: 2px 9px 16px rgba(40, 255, 165, 0.19);
+  box-shadow: 2px 2px 10px inset hsla(0, 0%, 11%, 0.89),
+  3px 3px 6px inset hsla(0,0%,11%, 0.8),
+  -1px -1px 4px inset hsla(0, 0%, 53%, 0.95),
+  -4px -4px 8px inset hsla(0, 0%, 40%, 0.95);
+
 }
 
 input:-webkit-autofill,
@@ -232,15 +234,17 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid inherit;
-  -webkit-text-fill-color: aquamarine;
-  -webkit-box-shadow: 0 2px 2px 1000px rgba(85, 76, 170, 0.38) inset;
+font-soze: 1em;
+  -webkit-text-fill-color: #d7d7d7;
+
   transition: background-color 5000s ease-in-out 0s;
 }
 
-input:active {
-  background-color: inherit;
-  outline-color: aquamarine;
+input:active, input:focus {
+  background-color: hsl(0, 0%, 28%);
+  color: #4dffb9;
+  outline: none !important;
+  border: 1px solid aquamarine;
 }
 
 
@@ -261,14 +265,38 @@ h3 {
 
 button {
   padding: 1vh 5vw;
-  color: #a9f4ff;
-  font-size: 1em;
+  color: #dfdfdf;
+  font-size: 1.5em;
+  font-weight: bold;
   align-self: center;
   border-radius: 8px;
-  border: 2px outset #a9f4ff;
-  background: inherit;
-  box-shadow: 0 0 15px inset rgba(169, 244, 255, 0.34);
-  margin-bottom: 5vh;
+  border: none;
+  background: #303030;
+  box-shadow:
+          6px 6px 10px hsla(0, 0%, 10%, 0.89),
+          2px 2px 4px inset hsla(0,0%, 25%,0.9),
+          -2px -2px 4px inset hsla(0,0%, 10%,0.9),
+          -6px -6px 10px hsla(0, 0%, 25%, 0.95);
+
+
+  margin: auto;
+}
+
+button:hover {
+  border: 1px solid slateblue;
+  color:  slateblue;
+  background-color: inherit;
+}
+
+
+
+button:active {
+  box-shadow:   6px 6px 10px inset hsla(0, 0%, 11%, 0.89),
+  -1px -1px 5px inset hsla(0, 0%, 10%, 0.95),
+  -1px -1px 5px inset hsla(0, 0%, 10%, 0.95),
+  -6px -6px 10px inset hsla(0, 0%, 25%, 0.95),
+  1px 1px 5px inset hsla(0, 0%, 25%, 0.95);
+  outline: none;
 }
 
 @media only screen and (min-width: 820px) {
