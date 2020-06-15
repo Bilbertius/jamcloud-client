@@ -65,7 +65,7 @@ button#delete-song {
     margin: 0 0 0 auto;
     flex-shrink: 1;
     background-color: #303030;
-    box-shadow: -3px -3px 6px #4a4a4a, 3px 3px 6px #161616;
+    box-shadow: -3px -3px 6px #4a4a4a, 3px 3px 6px #161616, 1px 1px 3px inset #4a4a4a, -1px -1px 3px inset #161616;
 
 
 }
@@ -90,11 +90,16 @@ button#delete-song:active {
     font-size: 1.6vh;
     text-align: left;
     flex-grow: 2;
-
+    display: flex;
+    flex-flow: row nowrap;
     color: #a9f4ff;
+    align-items: center;
 }
 
-span#venue { display: none}
+span#venue { display: none;
+    flex-grow: 2;
+}
+span#date { flex-grow: 1;}
 
 @media only screen and (min-width: 450px) {
     ul.songlist {
@@ -106,4 +111,5 @@ span#venue { display: none}
     ul.songlist {
         width: 60vw;
     }
+    span#venue { display: flex;}
 }

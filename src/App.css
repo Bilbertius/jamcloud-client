@@ -56,6 +56,12 @@ ul {
   list-style-type: none;
 }
 
+button.sign-in-reg {
+  margin: auto auto 10vh auto;
+}
+
+
+
 ul.NavLinks {
   display: flex;
   justify-content: space-around;
